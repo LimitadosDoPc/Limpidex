@@ -1,0 +1,378 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    
+    /*justify-content: space-between espaçamento entre todos os elementos, ocupando todo o espaço livre*/
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /*Z-INDEX - USADA PARA ORGANIZAR OS MENUS. ASSOCIADO À PROPRIEDADE POSITION: fixed, relative, absolute ou sticky*/
+    z-index: 1000;
+}
+
+.header .logo img{
+    height: 6.5rem;
+    border-radius: 100%;
+}
+
+.header .navbar a{
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+}
+
+.header .navbar a:hover{
+    color: #003366;
+    align-items: center;
+    border-bottom: 0.1rem solid #003366;
+    padding-bottom: 0.5rem;
+}
+
+.header{
+    background: #007BFF;
+    align-items: center;
+    
+    /*justify-content: space-between espaçamento entre todos os elementos, ocupando todo o espaço livre*/
+    justify-content: space-between;
+    padding: 2.0rem 7%;
+    border-bottom: rgb(20, 18, 18);
+    position: fixed;    
+    top: 0rem;
+    left: 0;
+    right: 0;
+    align-items: center;
+
+    /*Z-INDEX - USADA PARA ORGANIZAR OS MENUS. ASSOCIADO À PROPRIEDADE POSITION: fixed, relative, absolute ou sticky*/
+    z-index: 1000;
+}
+
+
+
+.header .logo a img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+    align-items: center;
+     
+}
+.header.navbar{
+    align-items: center;
+    padding-right: 30px;
+    
+}
+.header .icons{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.header .icons div ion-icon{
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+}
+
+.header .icons div ion-icon:hover{
+    color: #003366;
+}
+
+
+/*O ÍCONE DO MENU NÃO PODE ESTAR VISÍVEL NO LAYOUT DE TELA PC OU TABLET. SÓ SERÁ VISÍVEL NO LAYOUT DE TELA CELULAR*/
+#menu-btn{
+    display: none;
+}
+
+/*1ª SEÇÃO - HOME*/
+
+.home{ 
+    position: relative;
+    min-height: 85vh; /*V=view, H=height (altura)*/
+    display: flex;
+    align-items: center;
+    background: url(imagens/Profissional.png)no-repeat;
+    background-size: cover;/*cobre toda a área do background*/
+    background-position: center;
+    border-bottom: var(--border-color);
+}
+
+/*APLICANDO COR DE MARCA DÁGUA NA IMAGEM DE FUNDO*/
+.home::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.home .content{
+    max-width: 60rem;
+    position: relative;
+    z-index: 2;
+}
+
+.home .content h3{
+    color: #003366;
+    font-size: 6rem;
+    text-transform: uppercase;/*MAIÚSCULO*/
+}
+
+.home .content p{
+    color: #003366;
+    font-size: 2rem;
+    line-height: 1.8;/*ESPAÇAMENTO ENTRE LINHAS*/
+    font-weight: bolder;/*NEGRITO LEVE*/
+    padding: 1rem 0;
+    
+}
+/*2ª SEÇÃO - ABOUT/SOBRE*/
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255)  ;
+    flex-wrap: wrap;/*CASO O CONTEÚDO UTRAPASSE A DIMENSÃO VISÍVEL DO CONTAINER, HAVERÁ UMA QUEBRA DOS ELEMENTOS*/
+    border-radius: 2cm ;
+    border: var(--border-color);
+}
+
+.about .row .image{
+    flex: 1 1 45rem;/*1 fração de aumento, 1 fração de redução dentro do limite do tamanho de 45rem*/
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    /*OS ELEMENTOS GANHAM DIMENSÃO DENTRO DO CONTAINER. o 1º valor é o tamanho que cresce, o 2º é o tamanho que reduz e o 3º valor é o tamanho limite para crescer ou reduzir*/
+    flex: 1 1 45rem;
+    color:#003366;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    color: #003366;
+    font-size: 3rem;
+    padding: 0 1rem;
+}
+
+.about .row .content p{
+    color: #1a3d7e;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 0rem 1rem;
+}
+
+/* FOOTER */
+
+/* FOOTER-CONTATOS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    gap: 30px; /* Espaçamento entre os cartões e o formulário */
+    margin: 55px 3rem;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px; /* Define uma largura fixa para os cartões */
+    transition: transform 0.3s;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact-card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007BFF;
+}
+
+.contact-card p {
+    color: #666;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o formulário ocupe toda a largura disponível, mas respeite o máximo de 400px */
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contact-container {
+        gap: 20px; /* Reduz o espaço entre os itens em telas pequenas */
+    }
+
+    .contact-card {
+        width: 100%; /* Faz os cartões ocuparem 100% da largura disponível em telas pequenas */
+        margin: 10px 0; /* Adiciona margem vertical para os cartões */
+    }
+
+    .container {
+        width: 100%; /* O formulário ocupa toda a largura disponível */
+    }
+    .home{
+        
+        background: none;
+        border-bottom: none;
+    }
+
+    .header .navbar .logo a{
+        display: flex;
+        height: 6.5rem;
+    }
+    .header .navbar a{
+        display: none;
+    }
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00b809;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color:#1f5c9e;
+}
+
+a {
+    font-size: 1.2rem; /* Aumentamos o tamanho da fonte dos links */
+    padding: 12px 20px; /* Aumentamos o espaçamento dos links */
+    display: inline-block; /* Certificando que o link seja um bloco clicável */
+}
+
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+}
+
+
+a.home-link {
+    color: #155fad; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    display: inline-block; 
+}
+
+a.home-link:hover {
+    text-decoration: underline; 
+}
+
+@media print {
+    /* Remove elementos não necessários para impressão */
+        .header, .footer, .navbar{
+            display: none;
+        }
+        /* Ajuste o layout principal para impressão */
+        body {
+            font-size: 12pt;
+            line-height: 1.6;
+            color: #000;
+            background: none; /* Remove fundos desnecessários */
+            margin: 0;
+        }
+   
+        /* Garantir que o conteúdo principal use toda a largura da página */
+        main {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+   
+        /* Remover estilos de links */
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+   
+        /* Ajustar tabelas para impressão */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+   
+        /* Evitar cortes em páginas */
+        h1, h2, h3, p, table {
+            page-break-inside: avoid;
+        }
+   
+        /* Mostrar apenas o necessário */
+        .print-only {
+            display: block;
+        }
+   }
